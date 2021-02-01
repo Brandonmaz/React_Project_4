@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Entry from './components/Entry'
+import FinishedEntry from './components/finishedEntries'
+
 import axios from 'axios'
 class App extends React.Component {
   state = {
@@ -90,6 +92,16 @@ class App extends React.Component {
             })}
             </>
             )
+            <div>Finished Tasks</div>
+            {this.state.entries.map((entry) => {
+                return (
+                    {entry.done === true ? <FinishedEntry
+                        key={entry.id}
+                        entry={entry}
+                        deleteEntry={this.deleteEntry}/> : NULL}
+                )
+            })}
+
         }
     }
 
