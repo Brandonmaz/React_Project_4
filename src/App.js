@@ -20,19 +20,19 @@ class App extends React.Component {
       this.getEntries()
     })
   }
-  // deleteEntry = (event) => {
-  //   axios.delete('/entries/' + event.target.value).then((response) => {
-  //     this.getEntries()
-  //   })
-  // }
-  // updateEntry = (event) => {
-  //   event.preventDefault()
-  //   event.target.reset()
-  //   const id = event.target.id
-  //   axios.put('/entries/' + id, this.state).then((response) => {
-  //     this.getEntries()
-  //   })
-  // }
+  deleteEntry = (event) => {
+    axios.delete('/entries/' + event.target.value).then((response) => {
+      this.getEntries()
+    })
+  }
+  updateEntry = (event) => {
+    event.preventDefault()
+    event.target.reset()
+    const id = event.target.id
+    axios.put('/entries/' + id, this.state).then((response) => {
+      this.getEntries()
+    })
+  }
   getEntries = () => {
     axios.get('https://todolistabcj.herokuapp.com/entries')
     .then(
