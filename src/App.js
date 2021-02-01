@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Entry from './components/Entry'
 import axios from 'axios'
 class App extends React.Component {
   state = {
@@ -75,6 +76,14 @@ componentDidMount = () => {
               <br/>
               <input type="submit" value="Create Entry"/>
             </form>
+            {this.state.entries.map((entry) => {
+                return (
+                    <Entry
+                        key={entry.id}
+                        entry={entry}
+                    />
+                )
+            })}
             </>
             )
         }
