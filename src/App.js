@@ -16,7 +16,7 @@ class App extends React.Component {
   }
   handleSubmit = (event) => {
     event.preventDefault()
-    axios.post('https://todolistabcj.herokuapp.com/entries', this.state).then((response) => {
+    axios.post('https://abcjtodolist.herokuapp.com/entries', this.state).then((response) => {
       this.getEntries()
     })
   }
@@ -34,7 +34,7 @@ class App extends React.Component {
   //   })
   // }
   getEntries = () => {
-    axios.get('https://todolistabcj.herokuapp.com/entries')
+    axios.get('https://https://abcjtodolist.herokuapp.com/entries')
     .then(
         (response) => this.setState({ entries: response.data }),
         (err) => console.error(err)
