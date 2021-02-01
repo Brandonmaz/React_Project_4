@@ -33,10 +33,10 @@ class Entry extends Component {
                                     value={this.props.description}
                                 />
                                 <br />
-                                <label htmlFor="duedate">Due Date</label>
+                                <label htmlFor="due_date">Due Date</label>
                                 <input
                                     type="date"
-                                    id="duedate"
+                                    id="due_date"
                                     onChange={this.props.handleChange}
                                     value={this.props.due_date}
                                 />
