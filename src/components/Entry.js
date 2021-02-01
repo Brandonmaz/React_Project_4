@@ -43,13 +43,13 @@ class Entry extends Component {
                     {/* <input type="checkbox" {this.props.entry.done}/> */}
                     <button value={this.props.entry.id} onClick={this.props.deleteEntry}>Delete</button>
                     <h4>Update Entry</h4>
-                    <form onSubmit={this.props.updateEntry}>
+                    <form id={this.props.entry.id} onSubmit={this.props.updateEntry}>
                         <label htmlFor="task">Task</label>
                         <input
                             type="text"
                             id="task"
                             onChange={this.props.handleChange}
-                            value={this.props.state.task}
+                            value={this.props.task}
                         />
                         <br />
                         <label htmlFor="description">Description</label>
@@ -57,7 +57,7 @@ class Entry extends Component {
                             type="text"
                             id="description"
                             onChange={this.props.handleChange}
-                            value={this.props.state.description}
+                            value={this.props.description}
                         />
                         <br />
                         <label htmlFor="duedate">Due Date</label>
@@ -65,7 +65,7 @@ class Entry extends Component {
                             type="text"
                             id="duedate"
                             onChange={this.props.handleChange}
-                            value={this.props.state.due_date}
+                            value={this.props.due_date}
                         />
                         <br />
                         <input type="submit" value="Update Task"/>
