@@ -41,8 +41,6 @@ class App extends React.Component {
     .then(
         (response) => this.setState({ entries: response.data, task: '', description: '', due_date: ''}),
         (err) => console.error(err)
-
-      })
     )
     .catch((error) => console.error(error))
     }
