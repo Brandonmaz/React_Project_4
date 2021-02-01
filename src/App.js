@@ -9,17 +9,17 @@ class App extends React.Component {
     done: false,
     entries: []
   }
-  // handleChange = (event) => {
-  //   this.setState({
-  //     [event.target.id]: event.target.value
-  //   })
-  // }
-  // handleSubmit = (event) => {
-  //   event.preventDefault()
-  //   axios.post('https://todolistabcj.herokuapp.com/entries', this.state).then((response) => {
-  //     this.getEntries()
-  //   })
-  // }
+  handleChange = (event) => {
+    this.setState({
+      [event.target.id]: event.target.value
+    })
+  }
+  handleSubmit = (event) => {
+    event.preventDefault()
+    axios.post('https://todolistabcj.herokuapp.com/entries', this.state).then((response) => {
+      this.getEntries()
+    })
+  }
   // deleteEntry = (event) => {
   //   axios.delete('/entries/' + event.target.value).then((response) => {
   //     this.getEntries()
@@ -48,35 +48,35 @@ class App extends React.Component {
 
     render = () => {
         return (
-            // <>
-            // <h1>Create New Entry</h1>
-            // <form onSubmit={this.handleSubmit}>
-            //   <label htmlFor="task">Task</label>
-            //   <input
-            //     type="text"
-            //     id="task"
-            //     onChange={this.handleChange}
-            //     value={this.state.task}
-            //   />
-            //   <br/>
-            //   <label htmlFor="description">Description</label>
-            //   <input
-            //     type="text"
-            //     id="description"
-            //     onChange={this.handleChange}
-            //     value={this.state.description}
-            //   />
-            //   <br/>
-            //   <label htmlFor="due_date">Due Date</label>
-            //   <input
-            //     type="text"
-            //     id="due_date"
-            //     onChange={this.handleChange}
-            //     value={this.state.due_date}
-            //   />
-            //   <br/>
-            //   <input type="submit" value="Create Entry"/>
-            // </form>
+            <>
+            <h1>Create New Entry</h1>
+            <form onSubmit={this.handleSubmit}>
+              <label htmlFor="task">Task</label>
+              <input
+                type="text"
+                id="task"
+                onChange={this.handleChange}
+                value={this.state.task}
+              />
+              <br/>
+              <label htmlFor="description">Description</label>
+              <input
+                type="text"
+                id="description"
+                onChange={this.handleChange}
+                value={this.state.description}
+              />
+              <br/>
+              <label htmlFor="due_date">Due Date</label>
+              <input
+                type="text"
+                id="due_date"
+                onChange={this.handleChange}
+                value={this.state.due_date}
+              />
+              <br/>
+              <input type="submit" value="Create Entry"/>
+            </form>
             {this.state.entries.map((entry) => {
                 return (
                     <Entry
@@ -85,7 +85,7 @@ class App extends React.Component {
                     />
                 )
             })}
-            // </>
+            </>
             )
         }
     }
