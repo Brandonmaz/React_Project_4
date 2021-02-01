@@ -21,18 +21,18 @@ class App extends React.Component {
     })
   }
   deleteEntry = (event) => {
-    axios.delete('/entries/' + event.target.value).then((response) => {
+    axios.delete('https://todolistabcj.herokuapp.com/entries/' + event.target.value).then((response) => {
       this.getEntries()
     })
   }
-//   updateEntry = (event) => {
-//     event.preventDefault()
-//     event.target.reset()
-//     const id = event.target.id
-//     axios.put('/entries/' + id, this.state).then((response) => {
-//       this.getEntries()
-//     })
-//   }
+  updateEntry = (event) => {
+    event.preventDefault()
+    event.target.reset()
+    const id = event.target.id
+    axios.put('https://todolistabcj.herokuapp.com/entries/' + id, this.state).then((response) => {
+      this.getEntries()
+    })
+  }
   getEntries = () => {
     axios.get('https://todolistabcj.herokuapp.com/entries')
     .then(
@@ -83,7 +83,8 @@ class App extends React.Component {
                         key={entry.id}
                         entry={entry}
                         deleteEntry={this.deleteEntry}
-
+                        updateEntry={this.updateEntry}
+                        handleChange={this.handleChange}
                     />
                 )
             })}
