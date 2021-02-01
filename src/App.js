@@ -25,14 +25,14 @@ class App extends React.Component {
       this.getEntries()
     })
   }
-  updateEntry = (event) => {
-    event.preventDefault()
-    event.target.reset()
-    const id = event.target.id
-    axios.put('/entries/' + id, this.state).then((response) => {
-      this.getEntries()
-    })
-  }
+//   updateEntry = (event) => {
+//     event.preventDefault()
+//     event.target.reset()
+//     const id = event.target.id
+//     axios.put('/entries/' + id, this.state).then((response) => {
+//       this.getEntries()
+//     })
+//   }
   getEntries = () => {
     axios.get('https://todolistabcj.herokuapp.com/entries')
     .then(
@@ -82,6 +82,8 @@ class App extends React.Component {
                     <Entry
                         key={entry.id}
                         entry={entry}
+                        deleteEntry={this.deleteEntry}
+
                     />
                 )
             })}
