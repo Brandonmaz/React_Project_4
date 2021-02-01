@@ -88,18 +88,16 @@ class App extends React.Component {
                         updateEntry={this.updateEntry}
                         handleChange={this.handleChange}
                     />
-                )
-            })}
 
-            <div>Finished Tasks</div>
-            {this.state.entries.map((entry) => {
-                return (
                     {entry.done === true ? <FinishedEntry
                         key={entry.id}
                         entry={entry}
                         deleteEntry={this.deleteEntry}/> : NULL}
+
                 )
             })}
+
+
             </>
 
             )
