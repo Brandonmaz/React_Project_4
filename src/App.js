@@ -39,9 +39,9 @@ class App extends React.Component {
   getEntries = () => {
     axios.get('https://todolistabcj.herokuapp.com/entries')
     .then(
-        (response) => this.setState({ entries: response.data }),
+        (response) => this.setState({ entries: response.data, task: '', description: '', due_date: ''}),
         (err) => console.error(err)
-        this.setState({ task: '', description: '', due_date: ''})
+
       })
     )
     .catch((error) => console.error(error))
