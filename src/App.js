@@ -21,7 +21,7 @@ class App extends React.Component {
     })
   }
   deleteEntry = (event) => {
-    axios.delete('/entries/' + event.target.value).then((response) => {
+    axios.delete('https://todolistabcj.herokuapp.com/entries/' + event.target.value).then((response) => {
       this.getEntries()
     })
   }
