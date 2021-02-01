@@ -21,7 +21,7 @@ class App extends React.Component {
     })
   }
   deleteEntry = (event) => {
-    axios.delete('/entries/' + event.target.value).then((response) => {
+    axios.delete('https://todolistabcj.herokuapp.com/entries/' + event.target.value).then((response) => {
       this.getEntries()
     })
   }
@@ -29,7 +29,7 @@ class App extends React.Component {
     event.preventDefault()
     event.target.reset()
     const id = event.target.id
-    axios.put('/entries/' + id, this.state).then((response) => {
+    axios.put('https://todolistabcj.herokuapp.com/entries/' + id, this.state).then((response) => {
       this.getEntries()
     })
   }
