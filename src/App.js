@@ -71,7 +71,7 @@ class App extends React.Component {
               <br/>
               <label htmlFor="due_date">Due Date</label>
               <input
-                type="text"
+                type="date"
                 id="due_date"
                 onChange={this.handleChange}
                 value={this.state.due_date}
