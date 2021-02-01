@@ -10,7 +10,6 @@ class FinishedEntry extends Component {
                     <h4>Due Date: {this.props.entry.due_date}</h4>
                     {/* <input type="checkbox" {this.props.entry.done}/> */}
                     <button value={this.props.entry.id} onClick={this.props.deleteEntry}>Delete</button>
-                    <h4>Update Entry</h4>
                 </div>
             </div>
         )
