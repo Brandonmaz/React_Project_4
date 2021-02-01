@@ -48,7 +48,7 @@ class App extends React.Component {
 
     render = () => {
         return (
-            <>
+            // <>
             // <h1>Create New Entry</h1>
             // <form onSubmit={this.handleSubmit}>
             //   <label htmlFor="task">Task</label>
@@ -85,7 +85,7 @@ class App extends React.Component {
                     />
                 )
             })}
-            </>
+            // </>
             )
         }
     }
