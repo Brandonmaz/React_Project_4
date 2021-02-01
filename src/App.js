@@ -42,9 +42,10 @@ class App extends React.Component {
     .catch((error) => console.error(error))
     }
 
-componentDidMount = () => {
-    this.getEntries();
-}
+    componentDidMount = () => {
+        this.getEntries();
+    }
+
     render = () => {
         return (
             <>
