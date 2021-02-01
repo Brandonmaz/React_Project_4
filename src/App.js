@@ -90,8 +90,7 @@ class App extends React.Component {
                     />
                 )
             })}
-            </>
-            )
+
             <div>Finished Tasks</div>
             {this.state.entries.map((entry) => {
                 return (
@@ -101,7 +100,9 @@ class App extends React.Component {
                         deleteEntry={this.deleteEntry}/> : NULL}
                 )
             })}
+            </>
 
+            )
         }
     }
 
