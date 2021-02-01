@@ -43,7 +43,7 @@ class Entry extends Component {
                     {/* <input type="checkbox" {this.props.entry.done}/> */}
                     <button value={this.props.entry.id} onClick={this.props.deleteEntry}>Delete</button>
                     <h4>Update Entry</h4>
-                    <form onSubmit={this.props.updateEntry}>
+                    <form id={this.props.entry.id} onSubmit={this.props.updateEntry}>
                         <label htmlFor="task">Task</label>
                         <input
                             type="text"
