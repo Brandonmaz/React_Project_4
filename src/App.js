@@ -89,11 +89,6 @@ class App extends React.Component {
                         handleChange={this.handleChange}
                     />
 
-                    {entry.done ? <FinishedEntry
-                        key={entry.id}
-                        entry={entry}
-                        deleteEntry={this.deleteEntry}/> : NULL}
-
                 )
             })}
 
