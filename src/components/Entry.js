@@ -5,7 +5,8 @@ class Entry extends Component {
         return (
             <div className="container">
                 <div className="task">
-                    <h4>Task: {this.props.entry.task}</h4>
+                    <h4>Task: {this.props.entry.task}<button onClick={this.props.updateDone}>✓</button></h4>
+
                     <h4>Due Date: {this.props.entry.due_date}</h4>
                     <details >
                         <summary>More Info</summary>
@@ -24,7 +25,6 @@ class Entry extends Component {
                                     onChange={this.props.handleChange}
                                     value={this.props.task}
                                 />
-                                <button onClick={this.props.updateDone}>✓</button>
                                 <br />
                                 <label htmlFor="description">Description</label>
                                 <input

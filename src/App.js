@@ -38,7 +38,6 @@ class App extends React.Component {
 
   updateDone = (event) => {
     event.preventDefault()
-    event.target.reset()
     const id = event.target.id
     axios.put('https://todolistacj.herokuapp.com/entries/done/' + id).then((response) => {
 
