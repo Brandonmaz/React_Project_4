@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Entry from './components/Entry'
+import FinishedEntry from './components/finishedEntries'
+
 import axios from 'axios'
 class App extends React.Component {
   state = {
@@ -33,10 +35,19 @@ class App extends React.Component {
       this.getEntries()
     })
   }
+
+  updateDone = (event) => {
+    event.preventDefault()
+    const id = event.target.id
+    axios.put('https://todolistacj.herokuapp.com/entries/done/' + id, this.state).then((response) => {
+        this.getEntries()
+    })
+  }
+
   getEntries = () => {
     axios.get('https://todolistabcj.herokuapp.com/entries')
     .then(
-        (response) => this.setState({ entries: response.data }),
+        (response) => this.setState({ entries: response.data, task: '', description: '', due_date: ''}),
         (err) => console.error(err)
     )
     .catch((error) => console.error(error))
@@ -69,7 +80,7 @@ class App extends React.Component {
               <br/>
               <label htmlFor="due_date">Due Date</label>
               <input
-                type="text"
+                type="date"
                 id="due_date"
                 onChange={this.handleChange}
                 value={this.state.due_date}
@@ -77,6 +88,7 @@ class App extends React.Component {
               <br/>
               <input type="submit" value="Create Entry"/>
             </form>
+            <h1>Task</h1>
             {this.state.entries.map((entry) => {
                 return (
                     <Entry
@@ -85,12 +97,13 @@ class App extends React.Component {
                         deleteEntry={this.deleteEntry}
                         updateEntry={this.updateEntry}
                         handleChange={this.handleChange}
+                        updateDone={this.updateDone}
                     />
-                )
-            })}
-            </>
-            )
-        }
+                  )
+              })}
+          </>
+        )
+      }
     }
 
 export default App
