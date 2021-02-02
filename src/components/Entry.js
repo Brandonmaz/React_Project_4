@@ -3,19 +3,17 @@ import React, {Component} from 'react'
 class Entry extends Component {
     render = () => {
         return (
+            <>
+            <h1>Task</h1>
             <div className="container">
-                <h1>Task</h1>
                 <div className="task">
                     <h4>{this.props.entry.task}<button
                      onClick={this.props.updateDone}
                      value={this.props.entry.id}>✓</button></h4>
-
-                    <h4>Due Date: {this.props.entry.due_date}</h4>
                     <details >
                         <summary>More Info</summary>
                         <h4>Description: {this.props.entry.description}</h4>
-
-
+                        <h4>Due Date: {this.props.entry.due_date}</h4>
                         {/* <input type="checkbox" {this.props.entry.done}/> */}
                         <button value={this.props.entry.id} onClick={this.props.deleteEntry}>Delete</button>
                         <details>
@@ -51,6 +49,7 @@ class Entry extends Component {
                     </details>
                 </div>
             </div>
+            </>
         )
     }
 }
