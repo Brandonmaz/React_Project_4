@@ -41,6 +41,8 @@ class App extends React.Component {
     const id = event.target.id
     axios.put('https://todolistacj.herokuapp.com/entries/done/' + id).then((response) => {
 
+    }), ((error) => {
+        console.log(error);
     })
   }
 
