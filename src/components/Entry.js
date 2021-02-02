@@ -9,7 +9,7 @@ class Entry extends Component {
                      onClick={this.props.updateDone}
                      value={this.props.entry.id}>✓</button></h4>
                     <details >
-                        <button>More Info</button>
+                        <summary>More Info</summary>
                         <h4>Description: {this.props.entry.description}</h4>
                         <h4>Due Date: {this.props.entry.due_date}</h4>
                         {/* <input type="checkbox" {this.props.entry.done}/> */}
