@@ -108,21 +108,22 @@ class App extends React.Component {
                 </div>
               </div>
             </div>
+            <footer>
+                <ul>
+                    <ul>
+                        Developers
+                        <li><a href='https://www.linkedin.com/in/aaronwilson166/'>Aaron Wilson</a></li>
+                        <li><a href='https://www.linkedin.com/in/brandonmazikowski/'>Brandon Mazikowski</a></li>
+                        <li><a href='https://www.linkedin.com/in/cavellw/'>Cavell Wong</a></li>
+                        <li><a href='https://www.linkedin.com/in/jamestorres01/'>James Torres</a></li>
+                    </ul>
+
+                </ul>
+                    <a href='https://todolistabcj.herokuapp.com/'>API</a>
+
+            </footer>
           </>
-          <footer>
-              <ul>
-                  <ul>
-                      Developers
-                      <li><a href='https://www.linkedin.com/in/aaronwilson166/'>Aaron Wilson</a></li>
-                      <li><a href='https://www.linkedin.com/in/brandonmazikowski/'>Brandon Mazikowski</a></li>
-                      <li><a href='https://www.linkedin.com/in/cavellw/'>Cavell Wong</a></li>
-                      <li><a href='https://www.linkedin.com/in/jamestorres01/'>James Torres</a></li>
-                  </ul>
 
-              </ul>
-                  <a href='https://todolistabcj.herokuapp.com/'>API</a>
-
-          </footer>
         )
       }
     }
