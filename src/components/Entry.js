@@ -5,7 +5,8 @@ class Entry extends Component {
         return (
             <div className="container">
                 <div className="task">
-                    <h4>Task: {this.props.entry.task}<button
+                    <h1>Task</h1>
+                    <h4>{this.props.entry.task}<button
                      onClick={this.props.updateDone}
                      value={this.props.entry.id}>✓</button></h4>
 
