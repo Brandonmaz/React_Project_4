@@ -88,34 +88,41 @@ class App extends React.Component {
               <br/>
               <input type="submit" value="Create Entry"/>
             </form>
-            <h1>Task</h1>
-            {this.state.entries.map((entry) => {
-                return (
-                    <Entry
-                        key={entry.id}
-                        entry={entry}
-                        deleteEntry={this.deleteEntry}
-                        updateEntry={this.updateEntry}
-                        handleChange={this.handleChange}
-                        updateDone={this.updateDone}
-                    />
-                  )
-              })}
-            <footer>
-                <ul>
-                    <ul>
-                        Developers
-                        <li><a href='https://www.linkedin.com/in/aaronwilson166/'>Aaron Wilson</a></li>
-                        <li><a href='https://www.linkedin.com/in/brandonmazikowski/'>Brandon Mazikowski</a></li>
-                        <li><a href='https://www.linkedin.com/in/cavellw/'>Cavell Wong</a></li>
-                        <li><a href='https://www.linkedin.com/in/jamestorres01/'>James Torres</a></li>
-                    </ul>
 
-                </ul>
-                    <a href='https://todolistabcj.herokuapp.com/'>API</a>
-
-            </footer>
+            <div id="paper">
+              <h1>Task</h1>
+              <div id="pattern">
+                <div id="content">
+                  {this.state.entries.map((entry) => {
+                      return (
+                        <Entry
+                            key={entry.id}
+                            entry={entry}
+                            deleteEntry={this.deleteEntry}
+                            updateEntry={this.updateEntry}
+                            handleChange={this.handleChange}
+                            updateDone={this.updateDone}
+                        />
+                      )
+                  })}
+                </div>
+              </div>
+            </div>
           </>
+          <footer>
+              <ul>
+                  <ul>
+                      Developers
+                      <li><a href='https://www.linkedin.com/in/aaronwilson166/'>Aaron Wilson</a></li>
+                      <li><a href='https://www.linkedin.com/in/brandonmazikowski/'>Brandon Mazikowski</a></li>
+                      <li><a href='https://www.linkedin.com/in/cavellw/'>Cavell Wong</a></li>
+                      <li><a href='https://www.linkedin.com/in/jamestorres01/'>James Torres</a></li>
+                  </ul>
+
+              </ul>
+                  <a href='https://todolistabcj.herokuapp.com/'>API</a>
+
+          </footer>
         )
       }
     }
