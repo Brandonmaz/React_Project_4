@@ -36,6 +36,15 @@ class App extends React.Component {
     })
   }
 
+  updateDone = (event) => {
+    event.preventDefault()
+    event.target.reset()
+    const id = event.target.id
+    axios.put('https://todolistacj.herokuapp.com/entries/done/' + id).then((response) => {
+
+    })
+  }
+
   getEntries = () => {
     axios.get('https://todolistabcj.herokuapp.com/entries')
     .then(
@@ -88,6 +97,7 @@ class App extends React.Component {
                         deleteEntry={this.deleteEntry}
                         updateEntry={this.updateEntry}
                         handleChange={this.handleChange}
+                        updateDone={this.updateDone}
                     />
 
                 )
