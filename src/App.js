@@ -88,6 +88,7 @@ class App extends React.Component {
               <br/>
               <input type="submit" value="Create Entry"/>
             </form>
+            <h1>Task</h1>
             {this.state.entries.map((entry) => {
                 return (
                     <Entry
@@ -98,15 +99,11 @@ class App extends React.Component {
                         handleChange={this.handleChange}
                         updateDone={this.updateDone}
                     />
-
-                )
-            })}
-
-
-            </>
-
-            )
-        }
+                  )
+              })}
+          </>
+        )
+      }
     }
 
 export default App

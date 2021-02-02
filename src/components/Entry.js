@@ -3,8 +3,6 @@ import React, {Component} from 'react'
 class Entry extends Component {
     render = () => {
         return (
-            <>
-            <h1>Task</h1>
             <div className="container">
                 <div className="task">
                     <h4>{this.props.entry.task}<button
@@ -49,7 +47,6 @@ class Entry extends Component {
                     </details>
                 </div>
             </div>
-            </>
         )
     }
 }
