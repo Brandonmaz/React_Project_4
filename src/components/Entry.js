@@ -7,7 +7,7 @@ class Entry extends Component {
                 <div className="task">
                     <input type="checkbox" id="check" value="checkbox"/> <label for="check">{this.props.entry.task}</label>
                     <details >
-                        <summary>More Info</summary>
+                        <summary></summary>
                         <h4>Description: {this.props.entry.description}</h4>
                         <h4>Due Date: {this.props.entry.due_date}</h4>
                         <button value={this.props.entry.id} onClick={this.props.deleteEntry}>Delete</button>
@@ -41,6 +41,7 @@ class Entry extends Component {
                                 <input type="submit" value="Update Task"/>
                             </form>
                         </details>
+                        
                     </details>
                 </div>
             </div>
