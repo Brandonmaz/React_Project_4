@@ -16,35 +16,36 @@ class App extends React.Component {
   }
   handleSubmit = (event) => {
     event.preventDefault()
-    axios.post('/entries', this.state).then((response) => {
+    axios.post('https://todolistabcj.herokuapp.com/entries', this.state).then((response) => {
       this.getEntries()
     })
   }
-  // deleteEntry = (event) => {
-  //   axios.delete('/entries/' + event.target.value).then((response) => {
-  //     this.getEntries()
-  //   })
-  // }
-  // updateEntry = (event) => {
-  //   event.preventDefault()
-  //   event.target.reset()
-  //   const id = event.target.id
-  //   axios.put('/entries/' + id, this.state).then((response) => {
-  //     this.getEntries()
-  //   })
-  // }
+  deleteEntry = (event) => {
+    axios.delete('https://todolistabcj.herokuapp.com/entries/' + event.target.value).then((response) => {
+      this.getEntries()
+    })
+  }
+  updateEntry = (event) => {
+    event.preventDefault()
+    event.target.reset()
+    const id = event.target.id
+    axios.put('https://todolistabcj.herokuapp.com/entries/' + id, this.state).then((response) => {
+      this.getEntries()
+    })
+  }
   getEntries = () => {
-    axios.get('/entries')
+    axios.get('https://todolistabcj.herokuapp.com/entries')
     .then(
         (response) => this.setState({ entries: response.data }),
         (err) => console.error(err)
     )
     .catch((error) => console.error(error))
     }
-    
-componentDidMount = () => {
-    this.getEntries();
-}
+
+    componentDidMount = () => {
+        this.getEntries();
+    }
+
     render = () => {
         return (
             <>
@@ -81,6 +82,9 @@ componentDidMount = () => {
                     <Entry
                         key={entry.id}
                         entry={entry}
+                        deleteEntry={this.deleteEntry}
+                        updateEntry={this.updateEntry}
+                        handleChange={this.handleChange}
                     />
                 )
             })}
