@@ -5,7 +5,9 @@ class Entry extends Component {
         return (
             <div className="container">
                 <div className="task">
-                    <h4>Task: {this.props.entry.task}<button onClick={this.props.updateDone}>✓</button></h4>
+                    <h4>Task: {this.props.entry.task}<button
+                     onClick={this.props.updateDone}
+                     value={this.props.entry.id}>✓</button></h4>
 
                     <h4>Due Date: {this.props.entry.due_date}</h4>
                     <details >
