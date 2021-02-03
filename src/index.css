@@ -51,8 +51,18 @@ h2 {
   font-weight: bold;
 }
 li {
-  list-style-type: square;
-  margin-left: 25px;
+  list-style-type: none;
+  /* margin: 10px; */
+  margin-left: 20px;
+
+}
+.descriptionLi {
+  border-bottom: 2px solid grey;
+  padding-bottom: 10px;
+}
+.footer li {
+  list-style-type: none;
+  border: none;
 }
 summary {
   outline: none;
