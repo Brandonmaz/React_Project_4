@@ -88,19 +88,26 @@ class App extends React.Component {
               <br/>
               <input type="submit" value="Create Entry"/>
             </form>
-            <h1>Task</h1>
-            {this.state.entries.map((entry) => {
-                return (
-                    <Entry
-                        key={entry.id}
-                        entry={entry}
-                        deleteEntry={this.deleteEntry}
-                        updateEntry={this.updateEntry}
-                        handleChange={this.handleChange}
-                        updateDone={this.updateDone}
-                    />
-                  )
-              })}
+            
+            <div id="paper">
+              <h1>Task</h1>
+              <div id="pattern">
+                <div id="content">
+                  {this.state.entries.map((entry) => {
+                      return (
+                        <Entry
+                            key={entry.id}
+                            entry={entry}
+                            deleteEntry={this.deleteEntry}
+                            updateEntry={this.updateEntry}
+                            handleChange={this.handleChange}
+                            updateDone={this.updateDone}
+                        />
+                      )
+                  })}
+                </div>
+              </div>
+            </div>
           </>
         )
       }
