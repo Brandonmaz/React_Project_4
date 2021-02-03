@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,8 +6,98 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(0,0,0,0.1);
 }
 
+#paper {
+  width: 600px;
+  height: 100%;
+  position: relative;
+  margin: 20px auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px #888;
+}
+#paper::before {
+  content: '';
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 40px;
+  background-color: rgba(255, 0, 0, 0.6);
+}
+#pattern {
+  height: 100%;
+  background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
+}
+#content, h2 {
+  padding-top: 6px;
+  padding-left: 56px;
+  padding-right: 16px;
+  line-height: 25px;
+  font-size: 19px;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+}
+h2 {
+  font-size: 30px;
+  text-decoration: underline;
+}
+input[type=checkbox]:checked + label {
+  color:black;
+  text-decoration: line-through;
+}
+/* .task {
+  border: 1px solid;
+} */
+
+h1 {
+  text-align: center;
+}
+form {
+  text-align: center;
+}
+.containerPost{
+ width: 16em;
+min-height: 14em;
+background: #f8de59;
+position: relative;
+filter: drop-shadow(3px 3px 10px rgba(0,0,0,0.8));
+transform: rotate(7deg) translateX(-50%);
+top: 50px;
+left: 50%;
+z-index: 2;
+}
+.containerPost:before {
+  content: '';
+  position: absolute;
+  right: 2em;
+  bottom: -2em;
+  left: 0;
+  border: 1em solid #f8de59;
+  z-index: -1;
+}
+.containerPost:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -2em;
+  border-width: 2em 2em 0 0;
+  border-style: solid;
+  border-color: #f8de59 transparent;
+  filter: drop-shadow(-4px 5px 9px rgba(0,0,0,0.5));
+}
+
+/* .create-content {
+  width: 50%;
+  border-radius: 0 5px 5px 0;
+  padding: 15px;
+  box-sizing: border-box;
+  overflow: auto;
+  margin: auto;
+} */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
