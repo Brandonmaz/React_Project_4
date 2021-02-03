@@ -114,7 +114,7 @@ class App extends React.Component {
             </div>
             <footer>
                 <ul>
-                    <ul>
+                    <ul className="footer">
                         Developers
                         <li><a href='https://www.linkedin.com/in/aaronwilson166/'>Aaron Wilson</a></li>
                         <li><a href='https://www.linkedin.com/in/brandonmazikowski/'>Brandon Mazikowski</a></li>

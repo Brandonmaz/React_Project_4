@@ -10,7 +10,7 @@ class Entry extends Component {
                 <div>
                     <details>
                         <summary>Description</summary>
-                            <li>{this.props.entry.description}</li>
+                            <li className="descriptionLi">{this.props.entry.description}</li>
                             <li>Due Date: {this.props.entry.due_date}</li>
                             <button value={this.props.entry.id} onClick={this.props.deleteEntry}>Delete</button>
                     </details>
