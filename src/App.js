@@ -94,7 +94,7 @@ class App extends React.Component {
                 </form>
             </div>
             <div id="paper">
-              <h2>Task</h2>
+              <h2>Tasks to Complete</h2>
               <div id="pattern">
                 <div id="content">
                   {this.state.entries.map((entry) => {
