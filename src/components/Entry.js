@@ -16,23 +16,26 @@ class Entry extends Component {
                         <details>
                             <summary>Update Entry</summary>
                             <form id={this.props.entry.id} onSubmit={this.props.updateEntry}>
-                                <label htmlFor="task">Task</label>
+                                <label htmlFor="task"></label>
                                 <input
+                                    placeholder="Task"
                                     type="text"
                                     id="task"
                                     onChange={this.props.handleChange}
                                     value={this.props.task}
                                 />
                                 <br />
-                                <label htmlFor="description">Description</label>
+                                <label htmlFor="description"></label>
                                 <input
+                                    placeholder="Description"
                                     type="text"
                                     id="description"
                                     onChange={this.props.handleChange}
                                     value={this.props.description}
                                 />
                                 <br />
-                                <label htmlFor="due_date">Due Date</label>
+                                <h5>Due Date</h5>
+                                <label htmlFor="due_date"></label>
                                 <input
                                     type="date"
                                     id="due_date"
