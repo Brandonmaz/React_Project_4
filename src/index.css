@@ -57,7 +57,8 @@ li {
 summary {
   outline: none;
   font-size: x-small;
-  font-weight: bold
+  font-weight: bold;
+  cursor: zoom-in;
 }
 input[type=checkbox]:checked + label {
   color:black;
