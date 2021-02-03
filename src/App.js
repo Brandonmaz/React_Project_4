@@ -60,37 +60,38 @@ class App extends React.Component {
     render = () => {
         return (
             <>
-            <h1>Create New Entry</h1>
-            <form onSubmit={this.handleSubmit}>
-              <label htmlFor="task">Task</label>
-              <input
-                type="text"
-                id="task"
-                onChange={this.handleChange}
-                value={this.state.task}
-              />
-              <br/>
-              <label htmlFor="description">Description</label>
-              <input
-                type="text"
-                id="description"
-                onChange={this.handleChange}
-                value={this.state.description}
-              />
-              <br/>
-              <label htmlFor="due_date">Due Date</label>
-              <input
-                type="date"
-                id="due_date"
-                onChange={this.handleChange}
-                value={this.state.due_date}
-              />
-              <br/>
-              <input type="submit" value="Create Entry"/>
-            </form>
-            
+            <div className="containerPost">
+              <h1>Create Entry</h1>
+                <form onSubmit={this.handleSubmit}>
+                  <label htmlFor="task">Task</label>
+                  <input
+                    type="text"
+                    id="task"
+                    onChange={this.handleChange}
+                    value={this.state.task}
+                  />
+                  <br/>
+                  <label htmlFor="description">Description</label>
+                  <input
+                    type="text"
+                    id="description"
+                    onChange={this.handleChange}
+                    value={this.state.description}
+                  />
+                  <br/>
+                  <label htmlFor="due_date">Due Date</label>
+                  <input
+                    type="date"
+                    id="due_date"
+                    onChange={this.handleChange}
+                    value={this.state.due_date}
+                  />
+                  <br/>
+                  <input type="submit" value="Create Entry"/>
+                </form>
+            </div>
             <div id="paper">
-              <h1>Task</h1>
+              <h2>Task</h2>
               <div id="pattern">
                 <div id="content">
                   {this.state.entries.map((entry) => {
@@ -108,7 +109,22 @@ class App extends React.Component {
                 </div>
               </div>
             </div>
+            <footer>
+                <ul>
+                    <ul>
+                        Developers
+                        <li><a href='https://www.linkedin.com/in/aaronwilson166/'>Aaron Wilson</a></li>
+                        <li><a href='https://www.linkedin.com/in/brandonmazikowski/'>Brandon Mazikowski</a></li>
+                        <li><a href='https://www.linkedin.com/in/cavellw/'>Cavell Wong</a></li>
+                        <li><a href='https://www.linkedin.com/in/jamestorres01/'>James Torres</a></li>
+                    </ul>
+
+                </ul>
+                    <a href='https://todolistabcj.herokuapp.com/'>API</a>
+
+            </footer>
           </>
+
         )
       }
     }

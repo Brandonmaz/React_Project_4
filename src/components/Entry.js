@@ -6,11 +6,13 @@ class Entry extends Component {
             <div className="container">
                 <div className="task">
                     <input type="checkbox" id="check" value="checkbox"/> <label for="check">{this.props.entry.task}</label>
-                    <details >
-                        <summary>More Info</summary>
-                        <h4>Description: {this.props.entry.description}</h4>
-                        <h4>Due Date: {this.props.entry.due_date}</h4>
-                        <button value={this.props.entry.id} onClick={this.props.deleteEntry}>Delete</button>
+                </div>
+                <div>
+                    <details>Description
+                            <li>{this.props.entry.description}</li>
+                            <li>Due Date: {this.props.entry.due_date}</li>
+                            <button value={this.props.entry.id} onClick={this.props.deleteEntry}>Delete</button>
+                    </details>
                         <details>
                             <summary>Update Entry</summary>
                             <form id={this.props.entry.id} onSubmit={this.props.updateEntry}>
@@ -41,8 +43,7 @@ class Entry extends Component {
                                 <input type="submit" value="Update Task"/>
                             </form>
                         </details>
-                    </details>
-                </div>
+                    </div>
             </div>
         )
     }
