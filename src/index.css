@@ -158,3 +158,52 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+li {
+    list-style-type: none;
+}
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    color: #666666;
+    font-family: Arial;
+    font-size: 15px;
+
+}
+
+a {
+    text-decoration: none;
+    color: #666666;
+}
+
+a:hover {
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+h3 {
+    margin: 0;
+}
+
+#check:hover {
+    cursor: pointer;
+}
+
+.column-1, .column-2 {
+    text-align: center;
+}
+
+
+ul, li{
+    text-align: center;
+    text-decoration-style: none;
+}
+
+#entryButton {
+    padding: .5em;
+    margin-top: 1em;
+}

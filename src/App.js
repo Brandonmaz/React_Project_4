@@ -90,7 +90,7 @@ class App extends React.Component {
                     value={this.state.due_date}
                   />
                   <br/>
-                  <input type="submit" value="Create Entry"/>
+                  <input type="submit" id="entryButton" value="Create Entry"/>
                 </form>
             </div>
             <div id="paper">
@@ -113,17 +113,19 @@ class App extends React.Component {
               </div>
             </div>
             <footer>
-                <ul>
-                    <ul className="footer">
-                        Developers
-                        <li><a href='https://www.linkedin.com/in/aaronwilson166/'>Aaron Wilson</a></li>
-                        <li><a href='https://www.linkedin.com/in/brandonmazikowski/'>Brandon Mazikowski</a></li>
-                        <li><a href='https://www.linkedin.com/in/cavellw/'>Cavell Wong</a></li>
-                        <li><a href='https://www.linkedin.com/in/jamestorres01/'>James Torres</a></li>
-                    </ul>
 
+                <ul className="column-1">
+                    <h3>Developers</h3>
+                    <li><a href='https://www.linkedin.com/in/aaronwilson166/'>Aaron Wilson</a></li>
+                    <li><a href='https://www.linkedin.com/in/brandonmazikowski/'>Brandon Mazikowski</a></li>
+                    <li><a href='https://www.linkedin.com/in/cavellw/'>Cavell Wong</a></li>
+                    <li><a href='https://www.linkedin.com/in/jamestorres01/'>James Torres</a></li>
                 </ul>
-                    <a href='https://todolistabcj.herokuapp.com/'>API</a>
+                <ul className="column-2">
+                    <h3>Site Info</h3>
+                    <li><a href='https://github.com/cavellerson/React_Project_4'>Github</a></li>
+                    <li><a href='https://todolistabcj.herokuapp.com/'>API</a></li>
+                </ul>
 
             </footer>
           </>
