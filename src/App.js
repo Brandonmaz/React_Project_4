@@ -63,23 +63,26 @@ class App extends React.Component {
             <div className="containerPost">
               <h1>Create Entry</h1>
                 <form onSubmit={this.handleSubmit}>
-                  <label htmlFor="task">Task</label>
+                  <label htmlFor="task"></label>
                   <input
+                    placeholder="Task"
                     type="text"
                     id="task"
                     onChange={this.handleChange}
                     value={this.state.task}
                   />
                   <br/>
-                  <label htmlFor="description">Description</label>
+                  <label htmlFor="description"></label>
                   <input
+                    placeholder="Description"
                     type="text"
                     id="description"
                     onChange={this.handleChange}
                     value={this.state.description}
                   />
                   <br/>
-                  <label htmlFor="due_date">Due Date</label>
+                  <h5>Due Date</h5>
+                  <label htmlFor="due_date"></label>
                   <input
                     type="date"
                     id="due_date"
