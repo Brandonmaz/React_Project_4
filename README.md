@@ -68,3 +68,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+The app:
+The function of the app is a to-do list. In everyday life it is easy to forget things that you need to do throughout a day, a week and even a month. Our app is to help those of us that need to stay organized and get reminders of tasks we need to take care of.
+Some features we wanted to add:
+Authorization would help take this app to the next level. We will look into a way so that when a user logs in they see only the tasks they need to complete and not another user.
+We wanted to have a separate area where if you finished a task it would goto a finished task section that worked with a checkbox. This would then end up in a separate row away from    tasks you still need to complete. Current function of the checkbox puts a line through the completed task. Unfortunately, we were unable to get this feature working with a ternary operator. We will look into how we can get this function to work in the future.
+Finding a better way to hide the details/update entry. We tried with css but we were unsuccessful in hiding them. The idea was a hover effect over an arrow where once hovered on you could choose which option you want to select.
+We chose a simple layout towards the end of the project. We wanted to add more layers to it but it either didn't work and we scrapped it or we ran out of time. With more ruby/rails knowledge I do not doubt that our original idea would be easy to create.
