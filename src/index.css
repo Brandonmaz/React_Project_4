@@ -33,7 +33,7 @@ body {
   background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
 }
 #content, h2 {
-  padding-top: 6px;
+  padding-top: 5px;
   padding-left: 56px;
   padding-right: 16px;
   line-height: 25px;
@@ -47,25 +47,30 @@ h2 {
   font-family: Bradley Hand,
   cursive;
 }
+.task {
+  font-weight: bold;
+}
 li {
   list-style-type: square;
   margin-left: 25px;
 }
 summary {
   outline: none;
+  font-size: x-small;
+  font-weight: bold
 }
 input[type=checkbox]:checked + label {
   color:black;
   text-decoration: line-through;
 }
 input[type=text] {
-   width: 50%;
+   width: 65%;
    padding: 8px 15px;
-   margin: 8px 0;
+   margin: 2px 0;
    display: inline-block;
    border: 1px solid #ccc;
    border-radius: 4px;
-   /* box-sizing: border-box; */
+   
 }
 input[type=submit] {
   cursor: pointer;
