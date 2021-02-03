@@ -42,8 +42,17 @@ body {
   word-spacing: 5px;
 }
 h2 {
-  font-size: 30px;
+  font-size: 35px;
   text-decoration: underline;
+  font-family: Bradley Hand,
+  cursive;
+}
+li {
+  list-style-type: square;
+  margin-left: 25px;
+}
+summary {
+  outline: none;
 }
 input[type=checkbox]:checked + label {
   color:black;
@@ -85,6 +94,7 @@ h5 {
 }
 h1 {
   text-align: center;
+  font-family: Bradley Hand,cursive;
 }
 form {
   text-align: center;
