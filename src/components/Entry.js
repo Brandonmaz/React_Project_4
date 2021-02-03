@@ -8,7 +8,8 @@ class Entry extends Component {
                     <input type="checkbox" id="check" value="checkbox"/> <label for="check">{this.props.entry.task}</label>
                 </div>
                 <div>
-                    <details>Description
+                    <details>
+                        <summary>Description</summary>
                             <li>{this.props.entry.description}</li>
                             <li>Due Date: {this.props.entry.due_date}</li>
                             <button value={this.props.entry.id} onClick={this.props.deleteEntry}>Delete</button>

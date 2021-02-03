@@ -45,6 +45,13 @@ h2 {
   font-size: 30px;
   text-decoration: underline;
 }
+li {
+  list-style-type: square;
+  margin-left: 25px;
+}
+summary {
+  outline: none;
+}
 input[type=checkbox]:checked + label {
   color:black;
   text-decoration: line-through;
